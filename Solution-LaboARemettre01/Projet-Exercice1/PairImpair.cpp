@@ -1,22 +1,22 @@
-// But: Écrire un programme qui lit un entier et qui détermine et affiche s’il s’agit d’un entier pair d’un entier impair.
+// But: Ã‰crire un programme qui lit un entier et qui dÃ©termine et affiche sâ€™il sâ€™agit dâ€™un entier pair dâ€™un entier impair.
 // Auteur: Samuel Allaire
 // Date: 2020-09-12
 
 #include <iostream> // Pour communiquer avec l'utilisateur 
 
-int main() // La porte d'entrer pour le programme
+int main() // FR :  La porte d'entrer pour le programme
 {
 	setlocale(LC_ALL, "");  // Pour afficher correctement les accents dans la console
 
-	// Déclaration de la variable
+	// DÃ©claration de la variable
 	int nombre1;
 
-	// Le programme doit afficher un message pour inviter l'utilisateur à entre un nombre entier
+	// FR : Le programme doit afficher un message pour inviter l'utilisateur Ã  entre un nombre entier
 	std::cout << "Veuillez entrer un nombre entier : ";
-	// Le programme doit lire le nombre qui à été tapé au clavier
+	// FR : Le programme doit lire le nombre qui Ã  Ã©tÃ© tapÃ© au clavier
 	std::cin >> nombre1;
 
-	// Le programme lit le chiffre entier et détermine si le chiffre est pair ou impair.
+	// Le programme lit le chiffre entier et dÃ©termine si le chiffre est pair ou impair.
 	if (nombre1 % 2 == 0)
 	{
 		std::cout << nombre1 << " est pair : "; // Le programme doit afficher un message qui indique que le chiffre est pair
@@ -28,8 +28,9 @@ int main() // La porte d'entrer pour le programme
 }
 
 // Plan de tests
+// KM : Excellent plan de tests avec des nombres variÃ©s. Il manquerait juste 0
 /*
-nombre 1                      résultat escompté
+nombre 1                      rÃ©sultat escomptÃ©
 17                            15 est impair
 10                            10 est pair
 -8                            -1 est impair
