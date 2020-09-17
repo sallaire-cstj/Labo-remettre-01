@@ -1,27 +1,30 @@
-/* But: …crire  un programme qui prend comme entrÈe un nombre de cinq chiffres. Le programme vÈrifie qu'il y a bien
-5 chiffres dans le nombre.Puis il affiche le nombre verticalement, le premier chiffre sur la premiËre ligne, le
-deuxiËme chiffre sur la deuxiËme ligne, ainsi de suite.*/
+/* But: √âcrire  un programme qui prend comme entr√©e un nombre de cinq chiffres. Le programme v√©rifie qu'il y a bien
+5 chiffres dans le nombre.Puis il affiche le nombre verticalement, le premier chiffre sur la premi√®re ligne, le
+deuxi√®me chiffre sur la deuxi√®me ligne, ainsi de suite.*/
 // Auteur: Samuel Allaire
 // Date: 2020-09-12
 
 #include <iostream> // Pour communiquer avec l'utilisateur 
 
-int main() // La porte d'entrer pour le programme
+int main() // FR : La porte d'entrer pour le programme
 {
 	setlocale(LC_ALL, "");  // Pour afficher correctement les accents dans la console
 
-    // DÈclaration des variables
+    // D√©claration des variables
+	// KM : Tr√®s bon nom de variable
 	int nombre5chiffres;
 
-	// Le programme doit afficher un message pour inviter l'utilisateur ‡ entre un nombre entier ‡ 5 chiffres
-	std::cout << "Veuillez entrer un nombre entier ‡ 5 chiffres : ";
-	// Le programme doit lire le nombre qui ‡ ÈtÈ tapÈ au clavier
+	// FR : Le programme doit afficher un message pour inviter l'utilisateur √† entre un nombre entier √† 5 chiffres
+	std::cout << "Veuillez entrer un nombre entier √† 5 chiffres : ";
+	// FR : Le programme doit lire le nombre qui √† √©t√© tap√© au clavier
 	std::cin >> nombre5chiffres;
 
-	// Le programme lit le chiffre entier et dÈtermine si le nombre contient 5 chiffres
+	// Le programme lit le chiffre entier et d√©termine si le nombre contient 5 chiffres
+	// KM : Le or n'existe pas en C++ c'est ||
 	if ((nombre5chiffres >= 10000 && nombre5chiffres <= 99999) or (nombre5chiffres <= -10000 && nombre5chiffres >= -99999))
 	{
 		// Le programme doit afficher afficher le nombre verticalement
+		// KM : Il faudrait expliquer davantage le calcul
 		std::cout << nombre5chiffres / 10000 % 10 << "\n" << nombre5chiffres / 1000 % 10 << "\n" << nombre5chiffres / 100 % 10 << "\n" << nombre5chiffres / 10 % 10 << "\n" << nombre5chiffres % 10;
 	}
 	else
@@ -32,11 +35,12 @@ int main() // La porte d'entrer pour le programme
 }
 
 // Plan de tests
+// KM : Excellent plan de tests
 /*
-Nombre                        rÈsultat escomptÈ
+Nombre                        r√©sultat escompt√©
 17                            Ce nombre ne contient pas 5 chiffres.
 4231                          Ce nombre ne contient pas 5 chiffres.
--82134                        -82134 est affichÈ ligne par ligne
+-82134                        -82134 est affich√© ligne par ligne
 -4                            Ce nombre ne contient pas 5 chiffres.
-12345                         12345 est affichÈ ligne par ligne
+12345                         12345 est affich√© ligne par ligne
 */
